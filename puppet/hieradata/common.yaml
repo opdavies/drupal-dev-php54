@@ -1,5 +1,11 @@
 ---
 apache: httpd
+mysql: mysql
 
 php::modules:
   - php
+  - php-cli
+  - php-gd
+  - php-mbstring
+  - php-mysql
+  - php-xml
