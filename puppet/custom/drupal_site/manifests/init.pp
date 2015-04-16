@@ -1,6 +1,6 @@
 class drupal_site ($site_name) {
   file { 'site-root':
-    path   => "/srv/${site_name}",
+    path   => "/var/www/${site_name}",
     ensure => directory,
   }
 
