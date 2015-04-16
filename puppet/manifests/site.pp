@@ -1,5 +1,6 @@
 Package {
-  ensure => installed,
+  ensure        => installed,
+  allow_virtual => false,
 }
 
 Service {
