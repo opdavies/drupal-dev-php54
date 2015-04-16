@@ -1,3 +1,5 @@
 ---
+apache: httpd
+
 php::modules:
   - php

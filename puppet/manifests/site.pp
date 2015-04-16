@@ -2,6 +2,17 @@ Package {
   ensure => installed,
 }
 
-$php_modules = hiera('php::modules')
-package { $php_modules:
+Service {
+  ensure => running,
+  enable => true,
+}
+
+if ($vagrant) {
+  service { 'iptables':
+    ensure => stopped,
+  }
+}
+
+if ($role) {
+  include "role::${role}"
 }
