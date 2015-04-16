@@ -72,9 +72,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "puppet/manifests"
     puppet.manifest_file = "site.pp"
-    puppet.module_path = "puppet/modules"
+    puppet.module_path = [ "puppet/modules", "puppet/custom" ]
     puppet.facter = {
-      "vagrant" => "1"
+      "vagrant" => "1",
+      "role" => "drupal"
     }
     puppet.hiera_config_path = "puppet/hiera.yaml"
     puppet.working_directory = "/vagrant/puppet/hieradata"
