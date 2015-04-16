@@ -3,8 +3,8 @@ GIT
   ref: 3.3.0
   sha: c01682597524ae9395daa1133e11f576a80569a0
   specs:
-    puppetlabs-mysql (0.0.1)
+    puppetlabs/mysql (0.0.1)
 
 DEPENDENCIES
-  puppetlabs-mysql (>= 0)
+  puppetlabs/mysql (>= 0)
 
