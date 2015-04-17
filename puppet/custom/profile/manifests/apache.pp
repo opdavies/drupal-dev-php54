@@ -3,8 +3,4 @@ class profile::apache {
   $apache = hiera('apache')
   package { $apache: } ->
   service { $apache: }
-
-  file { "/etc/httpd/vhosts.d":
-    ensure => directory,
-  }
 }
