@@ -1,6 +1,7 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
+    example42/puppi (2.1.10)
     maestrodev/wget (1.6.0)
 
 GIT
@@ -10,6 +11,14 @@ GIT
   specs:
     willdurand/composer (1.0.0)
       maestrodev/wget (>= 1.2.0)
+
+GIT
+  remote: https://github.com/example42/puppet-yum
+  ref: v2.0.19
+  sha: 6f523b5f0a1257ba5a4a8c546b0234378e8d3348
+  specs:
+    example42/yum (2.1.17)
+      example42/puppi (> 2.0.0)
 
 GIT
   remote: https://github.com/puppetlabs/puppetlabs-apache
@@ -40,6 +49,7 @@ GIT
     puppetlabs/stdlib (0.0.1)
 
 DEPENDENCIES
+  example42/yum (>= 0)
   puppetlabs/apache (>= 0)
   puppetlabs/concat (>= 0)
   puppetlabs/mysql (>= 0)
