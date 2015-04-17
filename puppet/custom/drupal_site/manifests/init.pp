@@ -1,4 +1,6 @@
-define drupal_site ($site_name) {
+class drupal_site ($site_name) {
+  include apache
+
   if (defined("apache::vhost")) {
     apache::vhost { 'drupal6.local':
       port    => '80',
