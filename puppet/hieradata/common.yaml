@@ -6,7 +6,7 @@ base::packages:
   - curl
   - git
   - screen
-  - vim
+  - wget
 
 php::modules:
   - php
