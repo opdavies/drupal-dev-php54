@@ -1,7 +1,14 @@
-class drupal_site ($site_name) {
-  file { 'site-root':
-    path   => "/var/www/${site_name}",
-    ensure => directory,
+define drupal_site ($site_name) {
+  if (defined("apache::vhost")) {
+    apache::vhost { 'drupal6.local':
+      port    => '80',
+      docroot => '/var/www/html/drupal6',
+    }
+
+    apache::vhost { 'drupal7.local':
+      port    => '80',
+      docroot => '/var/www/html/drupal7',
+    }
   }
 
   if (defined(Class["mysql::server"])) {
