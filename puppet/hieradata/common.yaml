@@ -1,6 +1,6 @@
 ---
 apache: httpd
-mysql: mysql
+mysql: mysqld
 
 base::packages:
   - curl
