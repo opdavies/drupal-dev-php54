@@ -2,7 +2,3 @@
 	path = web/drupal7
 	url = http://git.drupal.org/project/drupal.git
 	branch = 7.x
-[submodule "web/drupal6"]
-	path = web/drupal6
-	url = http://git.drupal.org/project/drupal.git
-	branch = 6.x
