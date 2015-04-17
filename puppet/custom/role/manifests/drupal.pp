@@ -1,4 +1,3 @@
-class role::drupal {
-  include profile::apache
+class role::drupal inherits role::web {
   include profile::php
 }
