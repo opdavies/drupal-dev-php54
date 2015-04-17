@@ -2,6 +2,12 @@
 apache: httpd
 mysql: mysql
 
+base::packages:
+  - curl
+  - git
+  - screen
+  - vim
+
 php::modules:
   - php
   - php-cli
