@@ -11,6 +11,7 @@ Service {
 if ($vagrant) {
   service { 'iptables':
     ensure => stopped,
+    enable => false,
   }
 }
 
