@@ -1,3 +1,30 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    maestrodev/wget (1.6.0)
+
+GIT
+  remote: git://github.com/willdurand/puppet-composer.git
+  ref: v1.0.0
+  sha: a6469384957b611058ac4b8446e7aa149ccbdc9a
+  specs:
+    willdurand/composer (1.0.0)
+      maestrodev/wget (>= 1.2.0)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-apache
+  ref: 1.4.0
+  sha: e4ec6d4985fdb23e26c809e0d5786823d0689f90
+  specs:
+    puppetlabs/apache (0.0.1)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-concat
+  ref: 1.2.1
+  sha: ececd065ce095ec0a2e5d12860b4e4b5a9e708f6
+  specs:
+    puppetlabs/concat (0.0.1)
+
 GIT
   remote: https://github.com/puppetlabs/puppetlabs-mysql
   ref: 3.3.0
@@ -5,6 +32,17 @@ GIT
   specs:
     puppetlabs/mysql (0.0.1)
 
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-stdlib
+  ref: 4.6.0
+  sha: 73474b00b5ae3cbccec6cd0711311d6450139e51
+  specs:
+    puppetlabs/stdlib (0.0.1)
+
 DEPENDENCIES
+  puppetlabs/apache (>= 0)
+  puppetlabs/concat (>= 0)
   puppetlabs/mysql (>= 0)
+  puppetlabs/stdlib (>= 0)
+  willdurand/composer (>= 0)
 
