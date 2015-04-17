@@ -1,3 +1,5 @@
 class profile::apache {
-  include apache
+  class { '::apache':
+    mpm_module => 'prefork',
+  }
 }
