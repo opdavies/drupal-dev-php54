@@ -15,6 +15,6 @@ if ($vagrant) {
   }
 }
 
-if ($role and defined(Class["role::${role}"])) {
+if ($role) {
   include "role::${role}"
 }
