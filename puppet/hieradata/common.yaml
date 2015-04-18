@@ -9,9 +9,10 @@ base::packages:
   - wget
 
 php::modules:
-  - php54-php
-  - php54-php-cli
-  - php54-php-gd
-  - php54-php-mbstring
-  - php54-php-pdo
-  - php54-php-xml
+  - cli
+  - common
+  - gd
+  - mbstring
+  - mysqlnd
+  - pdo
+  - xml
