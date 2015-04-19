@@ -1,5 +1,0 @@
-class drush {
-  include composer
-
-
-}

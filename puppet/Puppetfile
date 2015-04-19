@@ -8,6 +8,10 @@ mod 'example42/yum',
   :git => 'https://github.com/example42/puppet-yum',
   :ref => 'v2.0.19'
 
+mod 'jonhattan/puppet-drush',
+  :git => 'https://github.com/jonhattan/puppet-drush',
+  :ref => '0.4.0'
+
 mod 'puppetlabs/apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache',
   :ref => '1.4.0'
@@ -27,7 +31,3 @@ mod 'puppetlabs/mysql',
 mod 'puppetlabs/stdlib',
   :git => 'https://github.com/puppetlabs/puppetlabs-stdlib',
   :ref => '4.6.0'
-
-mod 'willdurand/composer',
-  :git => 'git://github.com/willdurand/puppet-composer.git',
-  :ref => 'v1.0.0'
