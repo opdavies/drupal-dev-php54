@@ -2,6 +2,17 @@ FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
     example42/puppi (2.1.10)
+    puppetlabs/git (0.3.0)
+      puppetlabs/vcsrepo (>= 0.1.0)
+    puppetlabs/vcsrepo (1.2.0)
+
+GIT
+  remote: https://github.com/coldfrontlabs/puppet-composer
+  ref: master
+  sha: 71e6e219da858bda2a155722f7e012a231cc49a7
+  specs:
+    coldfrontlabs/composer (1.2.1)
+      puppetlabs/git (>= 0.0.2)
 
 GIT
   remote: https://github.com/example42/puppet-php
@@ -18,13 +29,6 @@ GIT
   specs:
     example42/yum (2.1.17)
       example42/puppi (> 2.0.0)
-
-GIT
-  remote: https://github.com/jonhattan/puppet-drush
-  ref: 0.4.0
-  sha: df4615f91eaa179bc641661a2953a40baf6b2c86
-  specs:
-    jonhattan/puppet-drush (0.0.1)
 
 GIT
   remote: https://github.com/puppetlabs/puppetlabs-apache
@@ -62,9 +66,9 @@ GIT
     puppetlabs/stdlib (0.0.1)
 
 DEPENDENCIES
+  coldfrontlabs/composer (>= 0)
   example42/php (>= 0)
   example42/yum (>= 0)
-  jonhattan/puppet-drush (>= 0)
   puppetlabs/apache (>= 0)
   puppetlabs/concat (>= 0)
   puppetlabs/inifile (>= 0)
