@@ -16,3 +16,5 @@ php::modules:
   - mysqlnd
   - pdo
   - xml
+
+drush::version: 'dev-master'
