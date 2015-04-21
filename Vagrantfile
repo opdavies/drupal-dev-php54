@@ -1,32 +1,20 @@
-require 'yaml'
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 
-dir = File.dirname(File.expand_path(__FILE__))
-configValues = YAML.load_file("#{dir}/config.yaml")
-data = configValues['vagrantfile-local']
-
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "#{data['vm']['box']}"
-  config.vm.host_name = "#{data['vm']['hostname']}" + '.' + "#{data['vm']['domain']}"
+  config.vm.box = "puppetlabs/centos-6.6-64-puppet"
+
+  config.vm.network "private_network", ip: "192.168.33.10"
+
   config.vm.synced_folder "web", "/var/www/html"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.customize [
-      'modifyvm', :id,
-      '--name' , "#{data['vm']['hostname']} + '.' + #{data['vm']['domain']}",
-      '--memory', "#{data['vm']['memory']}"
-    ]
-  end
-
-  # Map network ports to local ports
-  if data['vm']['network']['private_network'].to_s != ''
-    config.vm.network "private_network", ip: "#{data['vm']['network']['private_network']}"
-  end
-
-  data['vm']['network']['forwarded_port'].each do |i, port|
-    if port['guest'] != '' && port['host'] != ''
-      config.vm.network :forwarded_port, guest: port['guest'].to_i, host: port['host'].to_i
-    end
+    vb.memory = "1024"
   end
 
   config.vm.provision "puppet" do |puppet|
