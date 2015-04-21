@@ -8,9 +8,9 @@ mod 'example42/yum',
   :git => 'https://github.com/example42/puppet-yum',
   :ref => 'v2.0.19'
 
-mod 'jonhattan/puppet-drush',
-  :git => 'https://github.com/jonhattan/puppet-drush',
-  :ref => '0.4.0'
+mod 'opdavies/drupal_site',
+  :git => 'https://github.com/opdavies/puppet-drupal',
+  :ref => '0.0.1'
 
 mod 'puppetlabs/apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache',
