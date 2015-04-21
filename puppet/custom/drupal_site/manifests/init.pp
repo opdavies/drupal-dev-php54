@@ -2,13 +2,13 @@ class drupal_site ($site_name) {
   include apache
 
   if (defined("apache::vhost")) {
-    apache::vhost { 'drupal6.local':
-      port    => '80',
-      docroot => '/var/www/html/drupal6',
+    # Set some default values for vhosts.
+    Apache::Vhost {
+      port     => '80',
+      override => 'All'
     }
 
     apache::vhost { 'drupal7.local':
-      port    => '80',
       docroot => '/var/www/html/drupal7',
     }
   }
