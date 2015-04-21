@@ -3,7 +3,11 @@ class role::drupal inherits role::web {
   include profile::mysql
   include drush
 
-  class { 'drupal_site':
-    site_name => 'drupal7',
+  drupal_site { 'drupal7.local':
+    enable => true,
+  }
+
+  drupal_site { 'drupal8.local':
+    enable => true,
   }
 }
