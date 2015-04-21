@@ -18,7 +18,3 @@ if ($vagrant) {
 if ($role and defined("role::${role}")) {
   include "role::${role}"
 }
-
-class { 'drupal_site':
-  site_name => 'drupal7',
-}
