@@ -2,7 +2,7 @@ A CentOS based virtual machine, running Apache, PHP 5.4 and MySQL for local Drup
 
 ## Dependencies
 
-* [VirtualBox](https://www.virtualbox.org).
+* [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
 
 ## Puppet
