@@ -15,7 +15,12 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "private_network", ip: "192.168.33.10"
 
-  config.vm.synced_folder "web", "/var/www/html"
+  config.vm.synced_folder "web", "/var/www/html",
+    id: 'drupal-sites',
+    # type: 'nfs',
+    owner: 'vagrant',
+    group: 'apache',
+    mount_options: ['dmode=0775,fmode=0664']
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize [
