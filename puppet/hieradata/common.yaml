@@ -15,6 +15,7 @@ php::modules:
   - mbstring
   - mysqlnd
   - pdo
+  - twig
   - xml
 
 drush::version: 'dev-master'
