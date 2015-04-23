@@ -14,4 +14,32 @@ class profile::php {
 
   # Enable mod_php.
   include ::apache::mod::php
+
+  Ini_setting {
+    ensure  => present,
+    section => 'PHP',
+    path    => '/etc/php.ini',
+    notify  => Service[$apache],
+  }
+
+  # Set date.timezone.
+  ini_setting { 'php-date-timezone':
+    section => 'Date',
+    setting => 'date.timezone',
+    value   => 'Europe/London',
+  }
+
+  if ($vagrant) {
+    # Display errors.
+    ini_setting { 'php-display-errors':
+      setting => 'display_errors',
+      value   => 'On',
+    }
+
+    # Error reporting.
+    ini_setting { 'php-error-reporting':
+      setting => 'error_reporting',
+      value => 'E_ALL',
+    }
+  }
 }
