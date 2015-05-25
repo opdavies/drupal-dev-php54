@@ -1,10 +1,10 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    example42/puppi (2.1.10)
+    example42/puppi (2.1.11)
     puppetlabs/git (0.3.0)
       puppetlabs/vcsrepo (>= 0.1.0)
-    puppetlabs/vcsrepo (1.2.0)
+    puppetlabs/vcsrepo (1.3.0)
 
 GIT
   remote: https://github.com/coldfrontlabs/puppet-composer
@@ -32,10 +32,17 @@ GIT
 
 GIT
   remote: https://github.com/opdavies/puppet-drupal
-  ref: 0.0.1
-  sha: edece26593a78b8efce470f3ccc73632c1354728
+  ref: 0.0.2
+  sha: b5deb785986d4179fe46bbb283964472cfd9ae41
   specs:
     opdavies/drupal_site (0.0.1)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-apache
+  ref: 1.4.0
+  sha: e4ec6d4985fdb23e26c809e0d5786823d0689f90
+  specs:
+    puppetlabs/apache (0.0.1)
 
 GIT
   remote: https://github.com/puppetlabs/puppetlabs-concat
@@ -70,6 +77,7 @@ DEPENDENCIES
   example42/php (>= 0)
   example42/yum (>= 0)
   opdavies/drupal_site (>= 0)
+  puppetlabs/apache (>= 0)
   puppetlabs/concat (>= 0)
   puppetlabs/inifile (>= 0)
   puppetlabs/mysql (>= 0)

@@ -10,7 +10,7 @@ mod 'example42/yum',
 
 mod 'opdavies/drupal_site',
   :git => 'https://github.com/opdavies/puppet-drupal',
-  :ref => '0.0.1'
+  :ref => '0.0.2'
 
 mod 'puppetlabs/apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache',
